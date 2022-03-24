@@ -4,11 +4,14 @@
 Created on Thu Mar 24 00:04:19 2022
 
 @author: priyankamocherla
+
+Class to load sklearns Iris dataset and process it before training models
 """
 
 from sklearn import datasets
 import pandas as pd
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import normalize
 
 class IrisDataHandler:
 
@@ -34,7 +37,7 @@ class IrisDataHandler:
         return iris_df
 
     
-    def split_data(self, test_size=0.4, shuffle=True):
+    def split_data(self, test_size=0.4, shuffle=True, normalize_data=True):
         
         print(f'Test data split: {test_size}')
 
@@ -46,4 +49,9 @@ class IrisDataHandler:
         
         print(f'{len(X_train)} train samples, {len(X_test)} test samples\n')
         
+        if normalize_data:
+            X_train = normalize(X_train)
+            X_test = normalize(X_test)
+        
         return  X_train, X_test, y_train, y_test
+    

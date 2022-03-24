@@ -37,7 +37,7 @@ def plot_results(results_list):
 
 def example_training_func():
     seed = 8
-    iris_data = IrisDataHandler(seed=8)
+    iris_data = IrisDataHandler(seed=seed)
     X_train, X_test, y_train, y_test = iris_data.split_data()
     
     test_params = [{'n_neighbors' : i} for i in range(1,21)]

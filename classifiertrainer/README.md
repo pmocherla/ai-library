@@ -5,7 +5,7 @@ This is a small module that trains and evaluates classifiers on the Iris dataset
 Install via git
 ```
 git clone git@github.com:pmocherla/ai-library.git ai-library
-cd ai-library
+cd ai-library/classifiertrainer
 python setup.py install
 ```
 To test things are running run from your python interpreter
