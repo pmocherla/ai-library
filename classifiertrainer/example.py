@@ -5,6 +5,9 @@ Created on Thu Mar 24 00:10:11 2022
 
 @author: priyankamocherla
 
+An example: KNN model trained on the iris dataset. Performance metrics plotted for
+    range of k values tested
+
 """
 
 from classifiertrainer.iris_data_handler import IrisDataHandler
@@ -15,9 +18,9 @@ import matplotlib.pyplot as plt
 def train_and_eval_model(params, X_train, X_test, y_train, y_test):
     knn = KNNTrainer(params)
     knn.train(X_train, y_train)
-    results_dict = knn.evaluate(X_test, y_test)
+    results = knn.evaluate(X_test, y_test)
     
-    return results_dict
+    return results
 
 
 def plot_results(results_list):
@@ -37,7 +40,7 @@ def plot_results(results_list):
 
 def example_training_func():
     seed = 8
-    iris_data = IrisDataHandler(seed=8)
+    iris_data = IrisDataHandler(seed=seed)
     X_train, X_test, y_train, y_test = iris_data.split_data()
     
     test_params = [{'n_neighbors' : i} for i in range(1,21)]
