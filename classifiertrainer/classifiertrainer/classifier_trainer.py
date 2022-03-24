@@ -3,6 +3,9 @@
 Created on Wed Mar 23 14:46:00 2022
 
 @author: priyanka.mocherla
+
+Classifier abstract class for training sklearn classifier models. Current models supported:
+    - KNN
 """
 
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support

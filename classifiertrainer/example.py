@@ -5,6 +5,9 @@ Created on Thu Mar 24 00:10:11 2022
 
 @author: priyankamocherla
 
+An example: KNN model trained on the iris dataset. Performance metrics plotted for
+    range of k values tested
+
 """
 
 from classifiertrainer.iris_data_handler import IrisDataHandler
