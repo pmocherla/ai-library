@@ -15,9 +15,9 @@ import matplotlib.pyplot as plt
 def train_and_eval_model(params, X_train, X_test, y_train, y_test):
     knn = KNNTrainer(params)
     knn.train(X_train, y_train)
-    results_dict = knn.evaluate(X_test, y_test)
+    results = knn.evaluate(X_test, y_test)
     
-    return results_dict
+    return results
 
 
 def plot_results(results_list):
